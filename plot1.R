@@ -13,7 +13,7 @@ data<-household_power_consumption[household_power_consumption$Date=="1/2/2007"|
 #plot graph
 png(filename="plot1.png",width=480, height=480)
 
-hist(data[,3], xlim=c(0,6), col="red", xlab=
-             "Global Active Power (kilowats)", main="Global Active Power")
+hist(data[,3], xlim=c(0,6), ylim=c(0,1300), col="red", xlab=
+             "Global Active Power (kilowatts)", main="Global Active Power")
 
 dev.off()
