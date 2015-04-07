@@ -14,7 +14,7 @@ data$day<-as.POSIXct(paste(data$Date, as.character(data$Time)))
 #change language from Sys defult to English
 Sys.setlocale("LC_TIME", "C")
 
-#plot graph
+#plot graph 
 png(filename="plot3.png",width=480, height=480)
 
 plot(data$day, data$Sub_metering_1, type="l",
