@@ -18,6 +18,7 @@ Sys.setlocale("LC_TIME", "C")
 png(filename="plot4.png",width=504, height=504,pointsize = 14)
 
 par(mfrow=c(2,2))
+par(mar=c(4,4.5,2,2))
 plot(data$day, data$Global_active_power, type="l", 
      ylab="Global Active Power (kilowatts)", xlab="")
 
@@ -25,9 +26,9 @@ plot(data$day, data$Voltage, type="l",
      ylab="Voltage", xlab="datetime")
 plot(data$day, data$Sub_metering_1, type="l", ylab="Energy sub metering", xlab="")
 par(new=T)
-lines(data$day, data$Sub_metering_2, type="l", col="red",ylim=c(0,30),xlab="",ylab="")
+lines(data$day, data$Sub_metering_2, col="red",ylim=c(0,30),xlab="",ylab="")
 par(new=F)
-lines(data$day, data$Sub_metering_3, type="l", col="blue",ylim=c(0,30),xlab="",ylab="") 
+lines(data$day, data$Sub_metering_3, col="blue",ylim=c(0,30),xlab="",ylab="") 
 par(new=F)
 legend('topright', c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"), 
        col=c(1,2,4),lty=1, bty="n", pt.cex =2, cex=0.75)

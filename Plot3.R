@@ -20,10 +20,10 @@ png(filename="plot3.png",width=480, height=480)
 plot(data$day, data$Sub_metering_1, type="l",
      ylab="Energy sub metering", xlab="" )
 par(new=T)
-lines(data$day, data$Sub_metering_2, type="l", col="red",
+lines(data$day, data$Sub_metering_2, col="red",
       ylim=c(0,30),xlab="",ylab="", mar=c(5, 4, 10, 2))
 par(new=F)
-lines(data$day, data$Sub_metering_3, type="l", col="blue",
+lines(data$day, data$Sub_metering_3, col="blue",
       ylim=c(0,30),xlab="",ylab="", mar=c(5, 4, 10, 2)) 
 par(new=F)
 legend('topright', c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"), 
